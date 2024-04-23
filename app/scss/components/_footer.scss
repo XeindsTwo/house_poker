@@ -76,6 +76,9 @@
       max-width: 340px;
       margin: 0 auto;
     }
+    @include r($phone) {
+      max-width: 280px;
+    }
   }
 
   &__link {

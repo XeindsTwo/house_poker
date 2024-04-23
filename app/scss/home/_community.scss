@@ -143,6 +143,7 @@
     }
     @include r($tablet) {
       margin: 22px 0 16px;
+      line-height: 1.4;
       font-size: 18px;
     }
     @media (max-width: 705px) {
