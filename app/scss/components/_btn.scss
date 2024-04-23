@@ -1,0 +1,26 @@
+.btn {
+  display: flex;
+  max-width: max-content;
+  font-weight: 500;
+  padding: 9px 15px;
+  line-height: 1.4;
+  background-color: $accent;
+  justify-content: center;
+  color: $black;
+  border: 1px solid transparent;
+  transition: all .4s;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    background-color: transparent;
+    border-color: $accent;
+    color: $white;
+  }
+
+  &:focus {
+    background-color: transparent;
+    border-color: $white;
+    color: $white;
+  }
+}

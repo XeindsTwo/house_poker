@@ -1,0 +1,82 @@
+.home {
+  position: relative;
+
+  &__content {
+    max-width: 695px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__slogan {
+    display: block;
+    color: $accent;
+    margin-bottom: 25px;
+    font-weight: 500;
+  }
+
+  &__title {
+    font-size: 58px;
+    max-width: 480px;
+    line-height: 1.4;
+    font-weight: 600;
+    margin: 0 auto 25px;
+
+    span {
+      color: $accent;
+    }
+  }
+
+  &__text {
+    color: $gray200;
+    margin-bottom: 25px;
+  }
+
+  &__actions {
+    @include flex-align-center(25);
+    justify-content: center;
+  }
+
+  &__link {
+    transition: color .4s, border .4s;
+    @include flex-align-center(13);
+
+    &:hover {
+      color: $accent;
+
+      svg path {
+        fill: $accent;
+      }
+    }
+
+    &:focus {
+      color: $gray200;
+
+      svg {
+        transform: translateX(-3px) translateY(1px);
+
+        path {
+          fill: $gray200;
+        }
+      }
+    }
+
+    svg {
+      transform: translateY(1px);
+    }
+  }
+
+  &__decor {
+    @include objectCoverBg;
+    position: absolute;
+    top: 0;
+
+    &.one {
+      top: -45%;
+    }
+
+    &.two {
+      top: 7%;
+      right: 0;
+    }
+  }
+}

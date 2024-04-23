@@ -1,0 +1,71 @@
+.html {
+  position: relative;
+  scroll-behavior: smooth;
+
+  &.active {
+    overflow: hidden;
+  }
+}
+
+.body {
+  font-family: $inter;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.55;
+  color: $white;
+  background-color: $black;
+  position: relative;
+  overflow-x: hidden;
+  will-change: contents;
+  @include r($tablet) {
+    font-size: 16px;
+  }
+  @include r($phone) {
+    font-size: 14px;
+  }
+}
+
+.container {
+  max-width: 1370px;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  @include objectCoverBg;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.indent {
+  margin-top: 125px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba($accent, .3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $accent;
+}
+
+::selection {
+  background-color: #07a871;
+  color: white;
+}
