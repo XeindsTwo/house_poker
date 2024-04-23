@@ -11,6 +11,12 @@
   transition: all .4s;
   position: relative;
   overflow: hidden;
+  @media (max-width: 560px) {
+    padding: 9px 18px;
+  }
+  @media (max-width: 395px) {
+    padding: 9px 15px;
+  }
 
   &:hover {
     background-color: transparent;
