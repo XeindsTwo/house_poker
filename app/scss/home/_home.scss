@@ -1,5 +1,11 @@
 .home {
   position: relative;
+  @media (max-width: 945px) {
+    margin-top: 60px;
+  }
+  @media (max-width: 595px) {
+    margin-top: 55px;
+  }
 
   &__content {
     max-width: 695px;

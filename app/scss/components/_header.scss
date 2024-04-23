@@ -1,13 +1,59 @@
 .header {
   padding-top: 45px;
+  @media (max-width: 1400px) {
+    padding-top: 35px;
+  }
+  @media (max-width: 1180px) {
+    padding-top: 30px;
+  }
 
   &__inner {
     @include flex-between(30);
     align-items: center;
+    @media (max-width: 1185px) {
+      justify-content: stretch;
+      gap: 40px;
+    }
+    @include r($lg) {
+      gap: 32px;
+    }
+    @media (max-width: 945px) {
+      position: relative;
+      z-index: 455;
+    }
+  }
+
+  &__logo, &__right {
+    max-width: 244px;
+    width: 100%;
+    @media (max-width: 1185px) {
+      max-width: 100%;
+      width: auto;
+    }
+  }
+
+  &__nav {
+    @media (max-width: 945px) {
+      display: none;
+    }
+
+    &--mobile {
+      @media (max-width: 945px) {
+        display: block;
+      }
+    }
   }
 
   &__list {
     @include flex-align-center(20);
+    @media (max-width: 945px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 28px;
+    }
+    @include r($phone) {
+      gap: 24px;
+    }
   }
 
   &__item {
@@ -28,6 +74,13 @@
   &__link {
     transition: color .5s;
     position: relative;
+    @media (max-width: 945px) {
+      display: flex;
+      font-size: 18px;
+    }
+    @include r($phone) {
+      font-size: 16px;
+    }
 
     &::before {
       @include pseudo;
@@ -37,6 +90,9 @@
       width: 0;
       background-color: $accent;
       transition: width .4s;
+      @media (max-width: 945px) {
+        bottom: -3px;
+      }
     }
 
     &:hover {
@@ -52,11 +108,42 @@
 
   &__right {
     @include flex-align-center(18);
+    @media (max-width: 1185px) {
+      margin-left: auto;
+    }
+    @media (max-width: 595px) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+      @media (max-width: 595px) {
+        display: flex;
+        gap: 22px;
+        flex-direction: column;
+        margin-left: 0;
+        align-items: flex-start;
+      }
+
+      .btn {
+        font-size: 18px;
+        padding: 10px 20px;
+      }
+
+      @include r($phone) {
+        .btn {
+          font-size: 16px;
+        }
+      }
+    }
   }
 
   &__lang {
     @include flex-align-center(4);
     color: $gray;
+    @media (max-width: 595px) {
+      font-size: 18px;
+    }
   }
 
   &__btn {
@@ -91,6 +178,30 @@
       &::before {
         background-color: $white;
       }
+    }
+  }
+
+  &__mobile {
+    @include flex-column(40);
+    padding: 130px 15px 30px;
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 450;
+    background-color: $black;
+    backdrop-filter: blur(7px);
+    transform: translateX(-100%);
+    transition: transform .4s ease-in-out;
+
+    @media (max-width: 945px) {
+      display: flex;
+    }
+
+    &.active {
+      transform: translateX(0);
     }
   }
 }

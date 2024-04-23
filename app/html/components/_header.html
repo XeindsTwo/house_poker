@@ -1,28 +1,30 @@
 <header class="header">
   <div class="container">
     <div class="header__inner">
-      <img class="logo" src="images/logo.svg" width="45" height="45" alt="">
+      <div class="header__logo">
+        <img class="logo" src="images/logo.svg" width="45" height="45" alt="логотип">
+      </div>
       <nav class="header__nav">
         <ul class="header__list">
           <li class="header__item">
-            <a class="header__link" href="#start">Главная</a>
+            <a class="header__link desktop" href="#start">Главная</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#about">Подробнее о клубе</a>
+            <a class="header__link desktop" href="#about">Подробнее о клубе</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#benefits">Преимущества клуба</a>
+            <a class="header__link desktop" href="#benefits">Преимущества клуба</a>
           </li>
         </ul>
       </nav>
       <div class="header__right">
-        <a class="btn" href="https://t.me/KayrisonSupport" target="_blank">
+        <a class="btn" href="https://t.me/fullhouse_pppoker" target="_blank">
           Вступить в клуб
         </a>
         <div class="header__lang">
           <button class="header__btn active" type="button">Ru</button>
           /
-          <button class="header__btn" type="button">Eng</button>
+          <button class="header__btn" type="button">En</button>
         </div>
       </div>
       <button class="menu-btn menu-btn--header">
@@ -30,5 +32,30 @@
         <span class="sr-only">Взаимодействовать с меню</span>
       </button>
     </div>
+  </div>
+  <div class="header__mobile">
+    <div class="header__right header__right--mobile">
+      <a class="btn" href="https://t.me/fullhouse_pppoker" target="_blank">
+        Вступить в клуб
+      </a>
+      <div class="header__lang">
+        <button class="header__btn active" type="button">Ru</button>
+        /
+        <button class="header__btn" type="button">En</button>
+      </div>
+    </div>
+    <nav class="header__nav header__nav--mobile">
+      <ul class="header__list">
+        <li>
+          <a class="header__link mobile" href="#start">Главная</a>
+        </li>
+        <li>
+          <a class="header__link mobile" href="#about">Подробнее о клубе</a>
+        </li>
+        <li>
+          <a class="header__link mobile" href="#benefits">Преимущества клуба</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>

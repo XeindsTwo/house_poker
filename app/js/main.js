@@ -1,8 +1,8 @@
 const html = document.documentElement;
 const menuBtn = document.querySelector('.menu-btn');
 const header = document.querySelector('.header__mobile');
-const anchorsDesktop = document.querySelectorAll('a.header__link');
-const anchors = document.querySelectorAll('a.header__link-mobile');
+const anchorsDesktop = document.querySelectorAll('a.desktop');
+const anchors = document.querySelectorAll('a.mobile');
 
 menuBtn.addEventListener('click', (event) => {
   event.preventDefault();
@@ -15,7 +15,7 @@ menuBtn.addEventListener('click', (event) => {
 function scrollToTargetDesktop(targetId) {
   const targetSection = document.querySelector(targetId);
   if (targetSection) {
-    const targetOffset = targetSection.offsetTop - 30;
+    const targetOffset = targetSection.offsetTop - 25;
     window.scrollTo({top: targetOffset, behavior: 'smooth'});
   }
 }
