@@ -6,6 +6,9 @@
   @media (max-width: 595px) {
     margin-top: 55px;
   }
+  @include r($phone) {
+    margin-top: 50px;
+  }
 
   &__content {
     max-width: 695px;
@@ -50,11 +53,10 @@
       font-size: 34px;
     }
     @include r($phone) {
-      font-size: 32px;
       margin-bottom: 20px;
     }
     @media (max-width: 410px) {
-      font-size: 30px;
+      font-size: 32px;
     }
 
     span {

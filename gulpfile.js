@@ -77,7 +77,9 @@ function browsersync() {
     server: {
       baseDir: "app/"
     },
-    notify: false
+    notify: false,
+    online: true,
+    tunnel: "my-private-site"
   });
 }
 
