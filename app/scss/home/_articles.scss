@@ -1,0 +1,120 @@
+.articles {
+  &__title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    @media (max-width: 1360px) {
+      margin-bottom: 34px;
+    }
+    @include r($desktop) {
+      font-size: 30px;
+    }
+    @include r($lg) {
+      font-size: 28px;
+      margin-bottom: 26px;
+    }
+    @include r($sm) {
+      font-size: 26px;
+    }
+    @media (max-width: 575px) {
+      font-size: 24px;
+    }
+    @include r($phone) {
+      font-size: 22px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    @media (max-width: 1260px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 50px 50px;
+      margin: 0 auto;
+      max-width: 890px;
+    }
+    @media (max-width: 840px) {
+      grid-gap: 50px 35px;
+    }
+    @media (max-width: 610px) {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 460px;
+    }
+    @media (max-width: 535px) {
+      grid-gap: 43px;
+    }
+  }
+
+  &__item {
+    @include flex-column(0);
+  }
+
+  &__img {
+    @include objectCoverBg;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    @media (max-width: 1260px) {
+      margin: 0 auto 14px;
+    }
+    @media (max-width: 840px) {
+      width: 100%;
+    }
+    @include r($sm) {
+      height: 190px;
+    }
+    @media (max-width: 440px) {
+      height: 180px;
+    }
+    @media (max-width: 390px) {
+      height: 175px;
+    }
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.43;
+    text-align: center;
+    padding: 0 15px;
+    margin-bottom: 24px;
+    @media (max-width: 1360px) {
+      font-size: 19px;
+    }
+    @media (max-width: 1260px) {
+      margin-bottom: 20px;
+    }
+    @include r($tablet) {
+      font-size: 18px;
+    }
+    @include r($phone) {
+      font-size: 17px;
+      margin-bottom: 17px;
+    }
+  }
+
+  &__link {
+    padding: 13px 24px;
+    font-weight: 500;
+    margin: 0 auto;
+    display: flex;
+    max-width: max-content;
+    align-self: center;
+    color: $gray300;
+    border: 2px solid rgba($white, .15);
+    border-radius: 8px;
+    transition: color .4s, border .4s, background-color .4s;
+
+    &:hover {
+      border-color: $accent;
+      color: $white;
+    }
+
+    &:focus {
+      background-color: rgba($accent, .2);
+      color: $white;
+      border-color: transparent;
+    }
+  }
+}

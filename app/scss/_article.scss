@@ -1,0 +1,81 @@
+.article {
+  padding: 64px 0 150px;
+  @include r($desktop) {
+    padding-bottom: 100px;
+  }
+  @include r($lg) {
+    padding-bottom: 70px;
+  }
+  @include r($tablet) {
+    padding: 50px 0 55px;
+  }
+  @include r($sm) {
+    padding-bottom: 45px;
+  }
+  @media (max-width: 595px) {
+    padding-top: 40px;
+  }
+
+  &__inner {
+    max-width: 1028px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    line-height: 1.43;
+    font-weight: 500;
+    letter-spacing: -0.44px;
+    font-size: 44px;
+    max-width: 980px;
+    margin: 0 auto 50px;
+    @include r($desktop) {
+      font-size: 40px;
+      line-height: 1.4;
+      margin-bottom: 45px;
+    }
+    @include r($lg) {
+      font-size: 36px;
+      line-height: 1.34;
+    }
+    @include r($tablet) {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 670px) {
+      font-size: 30px;
+    }
+    @include r($sm) {
+      font-size: 28px;
+    }
+    @include r($phone) {
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+
+    &.short {
+      max-width: 700px;
+    }
+    &.middle {
+      max-width: 900px;
+    }
+  }
+
+  &__content {
+    @include flex-column(30);
+    color: $gray400;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.1px;
+    @include r($lg) {
+      font-size: 18px;
+    }
+    @include r($tablet) {
+      gap: 24px;
+      font-size: 16px;
+    }
+    @include r($phone) {
+      font-size: 15px;
+    }
+  }
+}
